@@ -39,11 +39,16 @@ const repositories = [
 
 export default function SideBar() {
   const [loading, setLoading] = useState(false);
-  const [repository, setRepository] = useState("angular/angular");
+  const [repository, setRepository] = useState({
+    key: "angular/angular",
+    value: "Angular",
+  });
   const [githubRepoData, setGithubData] = useState([]);
   const eventHandler = (repo) => {
     setRepository(repo);
   };
+
+  // https://flask-microserviice-rsxkgjvupa-uc.a.run.app/github
 
   React.useEffect(() => {
     setLoading(true);
@@ -51,14 +56,11 @@ export default function SideBar() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers":
-          "Origin, X-Requested-With, Content-Type, Accept",
+        "Access-Control-Allow-Origin": "*"
       },
       body: JSON.stringify({ repository: repository.key }),
-      mode: "cors",
     };
-    fetch("http://192.168.0.108:80/github", requestOptions)
+    fetch("http://localhost:8080/github", requestOptions)
       .then((res) => res.json())
       .then(
         (result) => {
