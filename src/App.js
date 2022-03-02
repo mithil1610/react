@@ -1,10 +1,9 @@
-import './App.css';
-import Sidebar from './components/SideBar';
+import Home from './components/Home';
 
 function App() {
   return (
     <div>
-      <Sidebar/>
+      <Home />
     </div>
   );
 }
