@@ -1,6 +1,8 @@
 import React from "react";
 const ReactHighcharts = require("react-highcharts");
 
+// Refer the high charts "https://www.highcharts.com/demo/bar-basic" for more information
+
 const BarCharts = (props) => {
   const config = {
     chart: {
