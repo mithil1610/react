@@ -1,6 +1,6 @@
 Problem Statement:
 The goal of this tutorial is to use GitHub to track created and closed issues of a given repository(angular, material-design, angular-cli,D3)
-for the past year along with timeseries forecasting using Tensorflow/LSTM Keras and will then see how to deploy it to gcloud platform.
+for the past year along with timeseries forecasting using Tensorflow/LSTM Keras and we will then see how to deploy it to gcloud platform.
 
 Solution:
 Step 1: We are creating three microservices:

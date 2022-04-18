@@ -23,6 +23,7 @@ import ListItemText from "@mui/material/ListItemText";
 // Import custom components
 import BarCharts from "./BarCharts";
 import Loader from "./Loader";
+import { ListItemButton } from "@mui/material";
 
 const drawerWidth = 240;
 // List of GitHub repositories 
@@ -153,13 +154,16 @@ export default function Home() {
         <Box sx={{ overflow: "auto" }}>
           <List>
             {/* Iterate through the repositories list */}
-            {repositories.map((repository) => (
+            {repositories.map((repo) => (
               <ListItem
                 button
-                key={repository.key}
-                onClick={() => eventHandler(repository)}
+                key={repo.key}
+                onClick={() => eventHandler(repo)}
+                disabled={loading && repo.value !== repository.value}
               >
-                <ListItemText primary={repository.value} />
+                <ListItemButton selected={repo.value === repository.value}>
+                  <ListItemText primary={repo.value} />
+                </ListItemButton>
               </ListItem>
             ))}
           </List>
