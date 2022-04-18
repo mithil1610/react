@@ -22,6 +22,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 // Import custom components
 import BarCharts from "./BarCharts";
+import LineCharts from "./LineCharts";
 import Loader from "./Loader";
 import { ListItemButton } from "@mui/material";
 
@@ -176,6 +177,11 @@ export default function Home() {
           <Loader />
         ) : (
           <div>
+            {/* Render barchart component for a monthly created issues for a selected repositories*/}
+            <LineCharts
+              title={`Monthly Created Issues for ${repository.value} in last 2 year`}
+              data={githubRepoData?.created}
+            />
             {/* Render barchart component for a monthly created issues for a selected repositories*/}
             <BarCharts
               title={`Monthly Created Issues for ${repository.value} in last 1 year`}
