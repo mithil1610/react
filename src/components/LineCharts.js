@@ -6,7 +6,7 @@ const ReactHighcharts = require("react-highcharts");
 const LineCharts = (props) => {
   const config = {
     chart: {
-      type: "column",
+      type: "line",
     },
     title: {
       text: props.title,
