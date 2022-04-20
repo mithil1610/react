@@ -34,16 +34,36 @@ const repositories = [
     value: "Angular",
   },
   {
-    key: "angular/angular-cli",
-    value: "Angular-cli",
-  },
-  {
     key: "angular/material",
     value: "Angular Material",
   },
   {
+    key: "angular/angular-cli",
+    value: "Angular CLI",
+  },
+  {
+    key: "SebastianM/angular-googlemaps",
+    value: "Angular Google Maps",
+  },
+  {
     key: "d3/d3",
     value: "D3",
+  },
+  {
+    key: "facebook/react",
+    value: "React",
+  },
+  {
+    key: "tensorflow/tensorflow",
+    value: "Tensorflow",
+  },
+  {
+    key: "keras-team/keras",
+    value: "Keras",
+  },
+  {
+    key: "pallets/flask",
+    value: "Flask",
   },
 ];
 
@@ -177,17 +197,22 @@ export default function Home() {
           <Loader />
         ) : (
           <div>
-            {/* Render barchart component for a monthly created issues for a selected repositories*/}
+            {/* Render linechart component for created issues for every repositories*/}
             <LineCharts
-              title={`Monthly Created Issues for ${repository.value} in last 2 year`}
-              data={githubRepoData?.created}
+              title={`Created Issues for every repository in last 2 year`}
+              data={githubRepoData?.all_repos_created_at_issues}
+            />
+            {/* Render linechart component for closed issues for every repositories*/}
+            <LineCharts
+              title={`Closed Issues for every repository in last 2 year`}
+              data={githubRepoData?.all_repos_closed_at_issues}
             />
             {/* Render barchart component for a monthly created issues for a selected repositories*/}
             <BarCharts
-              title={`Monthly Created Issues for ${repository.value} in last 1 year`}
+              title={`Monthly Created Issues for ${repository.value} in last 2 year`}
               data={githubRepoData?.created}
             />
-            {/* Render barchart component for a monthly created issues for a selected repositories*/}
+            {/* Render barchart component for a monthly closed issues for a selected repositories*/}
             <BarCharts
               title={`Monthly Closed Issues for ${repository.value} in last 1 year`}
               data={githubRepoData?.closed}
