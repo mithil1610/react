@@ -197,15 +197,10 @@ export default function Home() {
           <Loader />
         ) : (
           <div>
-            {/* Render linechart component for created issues for every repositories*/}
+            {/* Render linechart component for number of issues for every repositories*/}
             <LineCharts
               title={`Created Issues for every repository in last 2 year`}
-              data={githubRepoData?.all_repos_created_at_issues}
-            />
-            {/* Render linechart component for closed issues for every repositories*/}
-            <LineCharts
-              title={`Closed Issues for every repository in last 2 year`}
-              data={githubRepoData?.all_repos_closed_at_issues}
+              data={githubRepoData?.total_issues}
             />
             {/* Render barchart component for a monthly created issues for a selected repositories*/}
             <BarCharts
@@ -214,7 +209,7 @@ export default function Home() {
             />
             {/* Render barchart component for a monthly closed issues for a selected repositories*/}
             <BarCharts
-              title={`Monthly Closed Issues for ${repository.value} in last 1 year`}
+              title={`Monthly Closed Issues for ${repository.value} in last 2 year`}
               data={githubRepoData?.closed}
             />
             <Divider
