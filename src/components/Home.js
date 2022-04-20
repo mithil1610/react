@@ -42,7 +42,7 @@ const repositories = [
     value: "Angular CLI",
   },
   {
-    key: "SebastianM/angular-googlemaps",
+    key: "SebastianM/angular-google-maps",
     value: "Angular Google Maps",
   },
   {
@@ -199,19 +199,36 @@ export default function Home() {
           <div>
             {/* Render linechart component for number of issues for every repositories*/}
             <LineCharts
-              title={`Created Issues for every repository in last 2 year`}
+              title={`Issues for every repository in last 2 year`}
+              y_axis = 'Issues'
               data={githubRepoData?.total_issues}
             />
             {/* Render barchart component for a monthly created issues for a selected repositories*/}
             <BarCharts
               title={`Monthly Created Issues for ${repository.value} in last 2 year`}
+              y_axis = 'Issues'
               data={githubRepoData?.created}
             />
             {/* Render barchart component for a monthly closed issues for a selected repositories*/}
             <BarCharts
               title={`Monthly Closed Issues for ${repository.value} in last 2 year`}
+              y_axis = 'Issues'
               data={githubRepoData?.closed}
             />
+
+            {/* Render barchart component for stars for every repositories*/}
+            <BarCharts
+              title={`Stars for every repository in last 2 year`}
+              y_axis = 'Stars'
+              data={githubRepoData?.stars_count}
+            />
+            {/* Render barchart component for forks for every repositories*/}
+            <BarCharts
+              title={`Forks for every repository in last 2 year`}
+              y_axis = 'Forks'
+              data={githubRepoData?.forks_count}
+            />
+            
             <Divider
               sx={{ borderBlockWidth: "3px", borderBlockColor: "#FFA500" }}
             />

@@ -24,7 +24,8 @@ const BarCharts = (props) => {
     yAxis: {
       min: 0,
       title: {
-        text: "Issues",
+        // text: "Issues",
+        text: props.y_axis,
       },
     },
     legend: {
