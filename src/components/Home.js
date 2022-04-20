@@ -229,7 +229,7 @@ export default function Home() {
             />
             {/* Render barchart component for a weekly closed issues for a selected repositories*/}
             <BarCharts
-              title={`Monthly Closed Issues for ${repository.value} in last 54 weeks`}
+              title={`Monthly Closed Issues for ${repository.value} in last 24 weeks`}
               y_axis = 'Issues'
               data={githubRepoData?.closed_at_issues_week}
             />
