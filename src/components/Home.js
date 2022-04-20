@@ -215,7 +215,6 @@ export default function Home() {
               y_axis = 'Issues'
               data={githubRepoData?.closed}
             />
-
             {/* Render barchart component for stars for every repositories*/}
             <BarCharts
               title={`Stars for every repository in last 2 year`}
@@ -227,6 +226,12 @@ export default function Home() {
               title={`Forks for every repository in last 2 year`}
               y_axis = 'Forks'
               data={githubRepoData?.forks_count}
+            />
+            {/* Render barchart component for a weekly closed issues for a selected repositories*/}
+            <BarCharts
+              title={`Monthly Closed Issues for ${repository.value} in last 54 weeks`}
+              y_axis = 'Issues'
+              data={githubRepoData?.closed_at_issues_week}
             />
             
             <Divider
