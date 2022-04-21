@@ -256,6 +256,17 @@ export default function Home() {
                   loading={"lazy"}
                 />
               </div>
+              <div>
+                <Typography component="h4">
+                  {githubRepoData?.createdAtImageUrls?.week_line_chart.text}
+                </Typography>
+                {/* Render the Line chart for issues created on particular days of week for every Repository */}
+                <img
+                  src={githubRepoData?.createdAtImageUrls?.week_line_chart.week_line_chart}
+                  alt={"Line chart for issues created on particular days of week for every Repository"}
+                  loading={"lazy"}
+                />
+              </div>
               
               <div>
                 <Typography component="h4">
