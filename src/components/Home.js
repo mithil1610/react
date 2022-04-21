@@ -232,8 +232,7 @@ export default function Home() {
               title={`Weekly Closed Issues for ${repository.value} in last 24 weeks`}
               y_axis = 'Issues'
               data={githubRepoData?.closed_at_issues_week}
-            />
-            
+            /> 
             <Divider
               sx={{ borderBlockWidth: "3px", borderBlockColor: "#FFA500" }}
             />
