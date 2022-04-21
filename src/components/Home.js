@@ -267,6 +267,17 @@ export default function Home() {
                   loading={"lazy"}
                 />
               </div>
+              <div>
+                <Typography component="h4">
+                  {githubRepoData?.createdAtImageUrls?.week_line_chart_closed.text}
+                </Typography>
+                {/* Render the Line chart for issues closed on particular days of week for every Repository */}
+                <img
+                  src={githubRepoData?.createdAtImageUrls?.week_line_chart_closed.week_line_chart_closed}
+                  alt={"Line chart for issues closed on particular days of week for every Repository"}
+                  loading={"lazy"}
+                />
+              </div>
               
               <div>
                 <Typography component="h4">
