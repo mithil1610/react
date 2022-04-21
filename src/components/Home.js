@@ -247,6 +247,18 @@ export default function Home() {
 
               <div>
                 <Typography component="h4">
+                  Stacked bar chart for to plot the created and closed issues for every Repository
+                </Typography>
+                {/* Render the Stacked bar chart for to plot the created and closed issues for every Repository */}
+                <img
+                  src={githubRepoData?.createdAtImageUrls?.stacked_bar_chart}
+                  alt={"Stacked bar chart for to plot the created and closed issues for every Repository"}
+                  loading={"lazy"}
+                />
+              </div>
+              
+              <div>
+                <Typography component="h4">
                   Model Loss for Created Issues
                 </Typography>
                 {/* Render the model loss image for created issues */}
