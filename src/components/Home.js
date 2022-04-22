@@ -393,7 +393,7 @@ export default function Home() {
                 </Typography>
                 {/* Render the image for created pulls */}
                 <img
-                  src={githubRepoData?.pullsImageUrls?.pull_chart}
+                  src={githubRepoData?.closedAtImageUrls?.pull_chart}
                   alt={"Pulls Created in last few months."}
                   loading={"lazy"}
                 />
@@ -405,7 +405,7 @@ export default function Home() {
                 {/* Render the LSTM generated image for created pulls */}
                 <img
                   src={
-                    githubRepoData?.pullsImageUrls?.pull_chart_loss
+                    githubRepoData?.closedAtImageUrls?.pull_chart_loss
                   }
                   alt={"Model Loss for Created Pulls"}
                   loading={"lazy"}
@@ -417,7 +417,7 @@ export default function Home() {
                 </Typography>
                 {/* Render the image for pulls predictions*/}
                 <img
-                  src={githubRepoData?.pullsImageUrls?.pull_chart_predictions}
+                  src={githubRepoData?.closedAtImageUrls?.pull_chart_predictions}
                   alt={"Created Pulls Predictions"}
                   loading={"lazy"}
                 />
