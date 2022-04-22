@@ -233,6 +233,51 @@ export default function Home() {
               y_axis = 'Issues'
               data={githubRepoData?.closed_at_issues_week}
             />
+
+            <div>
+              <Typography component="h4">
+                Stacked bar chart for to plot the created and closed issues for every Repository
+              </Typography>
+              {/* Render the Stacked bar chart for to plot the created and closed issues for every Repository */}
+              <img
+                src={githubRepoData?.createdAtImageUrls?.stacked_bar_chart}
+                alt={"Stacked bar chart for to plot the created and closed issues for every Repository"}
+                loading={"lazy"}
+              />
+            </div>
+            <div>
+              <Typography component="h4">
+                {githubRepoData?.createdAtImageUrls?.week_line_chart1 + " has maximum number of issues (" + githubRepoData?.createdAtImageUrls?.week_line_chart2 + ") created."}
+              </Typography>
+              {/* Render the Line chart for issues created on particular days of week for every Repository */}
+              <img
+                src={githubRepoData?.createdAtImageUrls?.week_line_chart}
+                alt={"Line chart for issues created on particular days of week for every Repository"}
+                loading={"lazy"}
+              />
+            </div>
+            <div>
+              <Typography component="h4">
+                {githubRepoData?.createdAtImageUrls?.week_line_chart_closed1 + " has maximum number of issues (" + githubRepoData?.createdAtImageUrls?.week_line_chart_closed2 + ") closed."}
+              </Typography>
+              {/* Render the Line chart for issues closed on particular days of week for every Repository */}
+              <img
+                src={githubRepoData?.createdAtImageUrls?.week_line_chart_closed}
+                alt={"Line chart for issues closed on particular days of week for every Repository"}
+                loading={"lazy"}
+              />
+            </div>
+            <div>
+              <Typography component="h4">
+                {githubRepoData?.createdAtImageUrls?.month_line_chart_closed1 + " has maximum number of issues (" + githubRepoData?.createdAtImageUrls?.month_line_chart_closed2 + ") closed."}
+              </Typography>
+              {/* Render the Line chart for issues closed on particular days of week for every Repository */}
+              <img
+                src={githubRepoData?.createdAtImageUrls?.month_line_chart_closed}
+                alt={"Line chart for issues closed on particular months of year for every Repository"}
+                loading={"lazy"}
+              />
+            </div>
             
             <Divider
               sx={{ borderBlockWidth: "3px", borderBlockColor: "#FFA500" }}
@@ -244,51 +289,6 @@ export default function Home() {
                 Timeseries Forecasting of Created Issues using Tensorflow and
                 Keras LSTM based on past month
               </Typography>
-
-              <div>
-                <Typography component="h4">
-                  Stacked bar chart for to plot the created and closed issues for every Repository
-                </Typography>
-                {/* Render the Stacked bar chart for to plot the created and closed issues for every Repository */}
-                <img
-                  src={githubRepoData?.createdAtImageUrls?.stacked_bar_chart}
-                  alt={"Stacked bar chart for to plot the created and closed issues for every Repository"}
-                  loading={"lazy"}
-                />
-              </div>
-              <div>
-                <Typography component="h4">
-                  {githubRepoData?.createdAtImageUrls?.week_line_chart1 + " has maximum number of issues (" + githubRepoData?.createdAtImageUrls?.week_line_chart2 + ") created."}
-                </Typography>
-                {/* Render the Line chart for issues created on particular days of week for every Repository */}
-                <img
-                  src={githubRepoData?.createdAtImageUrls?.week_line_chart}
-                  alt={"Line chart for issues created on particular days of week for every Repository"}
-                  loading={"lazy"}
-                />
-              </div>
-              <div>
-                <Typography component="h4">
-                  {githubRepoData?.createdAtImageUrls?.week_line_chart_closed1 + " has maximum number of issues (" + githubRepoData?.createdAtImageUrls?.week_line_chart_closed2 + ") closed."}
-                </Typography>
-                {/* Render the Line chart for issues closed on particular days of week for every Repository */}
-                <img
-                  src={githubRepoData?.createdAtImageUrls?.week_line_chart_closed}
-                  alt={"Line chart for issues closed on particular days of week for every Repository"}
-                  loading={"lazy"}
-                />
-              </div>
-              <div>
-                <Typography component="h4">
-                  {githubRepoData?.createdAtImageUrls?.month_line_chart_closed1 + " has maximum number of issues (" + githubRepoData?.createdAtImageUrls?.month_line_chart_closed2 + ") closed."}
-                </Typography>
-                {/* Render the Line chart for issues closed on particular days of week for every Repository */}
-                <img
-                  src={githubRepoData?.createdAtImageUrls?.month_line_chart_closed}
-                  alt={"Line chart for issues closed on particular months of year for every Repository"}
-                  loading={"lazy"}
-                />
-              </div>
               
               <div>
                 <Typography component="h4">
