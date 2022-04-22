@@ -270,13 +270,22 @@ export default function Home() {
               <div>
                 <Typography component="h4">
                   {githubRepoData?.createdAtImageUrls?.week_line_chart_closed1 + " has maximum number of issues (" + githubRepoData?.createdAtImageUrls?.week_line_chart_closed2 + ") closed."}
-                  
-                  {githubRepoData?.createdAtImageUrls?.week_line_chart_closed.text}
                 </Typography>
                 {/* Render the Line chart for issues closed on particular days of week for every Repository */}
                 <img
                   src={githubRepoData?.createdAtImageUrls?.week_line_chart_closed}
                   alt={"Line chart for issues closed on particular days of week for every Repository"}
+                  loading={"lazy"}
+                />
+              </div>
+              <div>
+                <Typography component="h4">
+                  {githubRepoData?.createdAtImageUrls?.month_line_chart_closed1 + " has maximum number of issues (" + githubRepoData?.createdAtImageUrls?.month_line_chart_closed2 + ") closed."}
+                </Typography>
+                {/* Render the Line chart for issues closed on particular days of week for every Repository */}
+                <img
+                  src={githubRepoData?.createdAtImageUrls?.month_line_chart_closed}
+                  alt={"Line chart for issues closed on particular months of year for every Repository"}
                   loading={"lazy"}
                 />
               </div>
