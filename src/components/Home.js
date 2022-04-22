@@ -377,53 +377,7 @@ export default function Home() {
             </div>
             
             
-            {/* Rendering Timeseries Forecasting of Created Pulls using Tensorflow and
-                Keras LSTM  */}
-            <div>
-              <Divider
-                sx={{ borderBlockWidth: "3px", borderBlockColor: "#FFA500" }}
-              />
-              <Typography variant="h5" component="div" gutterBottom>
-                Timeseries Forecasting of Created Pulls using Tensorflow and
-                Keras LSTM based on past month
-              </Typography>
-
-              <div>
-                <Typography component="h4">
-                  Pulls Created in last few months.
-                </Typography>
-                {/* Render the image for created pulls */}
-                <img
-                  src={githubRepoData?.closedAtImageUrls?.pull_chart}
-                  alt={"Pulls Created in last few months."}
-                  loading={"lazy"}
-                />
-              </div>
-              <div>
-                <Typography component="h4">
-                  Model Loss for Created Pulls
-                </Typography>
-                {/* Render the LSTM generated image for created pulls */}
-                <img
-                  src={
-                    githubRepoData?.closedAtImageUrls?.pull_chart_loss
-                  }
-                  alt={"Model Loss for Created Pulls"}
-                  loading={"lazy"}
-                />
-              </div>
-              <div>
-                <Typography component="h4">
-                  Created Pulls Predictions
-                </Typography>
-                {/* Render the image for pulls predictions*/}
-                <img
-                  src={githubRepoData?.closedAtImageUrls?.pull_chart_predictions}
-                  alt={"Created Pulls Predictions"}
-                  loading={"lazy"}
-                />
-              </div>
-            </div>
+            
 
 
           </div>
