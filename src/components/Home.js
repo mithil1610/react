@@ -393,7 +393,7 @@ export default function Home() {
                 </Typography>
                 {/* Render the image for created pulls */}
                 <img
-                  src={githubRepoData?.closedAtImageUrls?.pull_chart}
+                  src={githubRepoData?.pullsImageUrls?.pull_chart}
                   alt={"Pulls Created in last few months."}
                   loading={"lazy"}
                 />
@@ -405,7 +405,7 @@ export default function Home() {
                 {/* Render the LSTM generated image for created pulls */}
                 <img
                   src={
-                    githubRepoData?.closedAtImageUrls?.pull_chart_loss
+                    githubRepoData?.pullsImageUrls?.pull_chart_loss
                   }
                   alt={"Model Loss for Created Pulls"}
                   loading={"lazy"}
@@ -417,8 +417,56 @@ export default function Home() {
                 </Typography>
                 {/* Render the image for pulls predictions*/}
                 <img
-                  src={githubRepoData?.closedAtImageUrls?.pull_chart_predictions}
+                  src={githubRepoData?.pullsImageUrls?.pull_chart_predictions}
                   alt={"Created Pulls Predictions"}
+                  loading={"lazy"}
+                />
+              </div>
+            </div>
+            
+            
+            {/* Rendering Timeseries Forecasting of Created Commits using Tensorflow and
+                Keras LSTM  */}
+            <div>
+              <Divider
+                sx={{ borderBlockWidth: "3px", borderBlockColor: "#FFA500" }}
+              />
+              <Typography variant="h5" component="div" gutterBottom>
+                Timeseries Forecasting of Created Commits using Tensorflow and
+                Keras LSTM based on past month
+              </Typography>
+              <div>
+                <Typography component="h4">
+                  Commits Created in last few months.
+                </Typography>
+                {/* Render the image for created commits */}
+                <img
+                  src={githubRepoData?.commitsImageUrls?.commit_chart}
+                  alt={"Commits Created in last few months."}
+                  loading={"lazy"}
+                />
+              </div>
+              <div>
+                <Typography component="h4">
+                  Model Loss for Created Commits
+                </Typography>
+                {/* Render the LSTM generated image for created commits */}
+                <img
+                  src={
+                    githubRepoData?.commitsImageUrls?.commit_chart_loss
+                  }
+                  alt={"Model Loss for Created Commits"}
+                  loading={"lazy"}
+                />
+              </div>
+              <div>
+                <Typography component="h4">
+                  Created Commits Predictions
+                </Typography>
+                {/* Render the image for commits predictions*/}
+                <img
+                  src={githubRepoData?.commitsImageUrls?.commit_chart_predictions}
+                  alt={"Created Commits Predictions"}
                   loading={"lazy"}
                 />
               </div>

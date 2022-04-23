@@ -5,6 +5,6 @@ ENV PATH /app/node_modules/.bin:$PATH
 COPY package*.json ./
 COPY ./public ./public
 COPY ./src ./src
-RUN npm install 
+RUN npm install --legacy-peer-deps
 CMD npm start
 
