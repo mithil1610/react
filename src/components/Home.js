@@ -473,9 +473,7 @@ export default function Home() {
             </div>
 
 
-              <Typography variant="h5" component="div" gutterBottom>
-                {githubRepoData?.branchs}
-              </Typography>
+              
 
 
           </div>
