@@ -441,7 +441,7 @@ export default function Home() {
                 </Typography>
                 {/* Render the image for created commits */}
                 <img
-                  src={githubRepoData?.commitsImageUrls?.commit_chart}
+                  src={githubRepoData?.pullsImageUrls?.commit_chart}
                   alt={"Commits Created in last few months."}
                   loading={"lazy"}
                 />
@@ -453,7 +453,7 @@ export default function Home() {
                 {/* Render the LSTM generated image for created commits */}
                 <img
                   src={
-                    githubRepoData?.commitsImageUrls?.commit_chart_loss
+                    githubRepoData?.pullsImageUrls?.commit_chart_loss
                   }
                   alt={"Model Loss for Created Commits"}
                   loading={"lazy"}
@@ -465,7 +465,7 @@ export default function Home() {
                 </Typography>
                 {/* Render the image for commits predictions*/}
                 <img
-                  src={githubRepoData?.commitsImageUrls?.commit_chart_predictions}
+                  src={githubRepoData?.pullsImageUrls?.commit_chart_predictions}
                   alt={"Created Commits Predictions"}
                   loading={"lazy"}
                 />
@@ -473,7 +473,7 @@ export default function Home() {
             </div>
 
 
-
+            <h3>{githubRepoData?.branchs}</h3>
 
 
           </div>
