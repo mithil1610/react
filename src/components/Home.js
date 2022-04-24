@@ -473,7 +473,7 @@ export default function Home() {
             </div>
 
 
-            <h3>{githubRepoData?.branchs}</h3>
+
 
 
           </div>
