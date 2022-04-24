@@ -473,6 +473,19 @@ export default function Home() {
             </div>
 
 
+            <ul>
+                { 
+                  githubRepoData?.branchs.map((items, i) => {      
+                    return <div>{ 
+                      items.map((item, i) => {
+                        return <li key={i}>{item.name+",  "+ item.commit+",  "+ item.protected}</li>
+                      })  }
+                      <h4>Next Branch</h4></div>
+                  })
+                }
+            </ul>
+
+
           </div>
         )}
       </Box>
