@@ -197,6 +197,20 @@ export default function Home() {
           <Loader />
         ) : (
           <div>
+
+
+            {/* Bonus Assignment 1 */}
+            <div>
+              <Typography variant="h5" component="div" gutterBottom>
+                Count of 
+              </Typography>
+              <LineCharts
+                title={`Count of keyword of the repository in tags of Stackoverflow Questions from data provided by answers.csv`}
+                y_axis = 'Count of Keyword'
+                data={githubRepoData?.tags_count}
+              />
+            </div>
+
             {/* Render linechart component for number of issues for every repositories*/}
             <LineCharts
               title={`Issues for every repository in last 2 year`}
